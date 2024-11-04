@@ -403,11 +403,6 @@ header{
 
 }
 
-.card-service:hover{
-  cursor: pointer;
-  transform: scale(1.05);
-
-}
 .card img{
   width: 90px;
   height: 100px;
@@ -611,21 +606,36 @@ header{
   padding: 10px;
 }
 
+.card-service:hover{
+  cursor: pointer;
+  transform: scale(1.05);
+  border-radius: 8px;
+
+}
+
 .card-body-service{
   padding: 15px;
   text-align: center;
   font-weight: 200;
 
   & h5{
-    font-family: ;
+    font-family:Arial, Helvetica, sans-serif;
     text-transform: capitalize;
-    
+    line-height: 15px;
+    padding-top: 15px;
+    font-weight: 600;
+    color: #000000e0;
   }
+
+& p{
+  line-height: 18px;
+  padding-top: 5px;
+}
 }
 
 .backgroud{
   background-size: 100% 100%;
-  box-shadow: 20px 20px 10px gray;
+ padding-bottom: 20px;
   animation: slider 10s linear infinite;
 }
 
@@ -644,3 +654,14 @@ header{
     background-image: url(CompanyImage/shutterstock_ship.jpg);
   }  
 }
+
+
+/* Form Page */
+
+ .container{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 5% 50px;
+  flex-wrap: wrap-reverse;
+ }
