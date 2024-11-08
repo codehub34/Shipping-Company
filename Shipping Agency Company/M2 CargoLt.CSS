@@ -665,3 +665,83 @@ header{
   padding: 5% 50px;
   flex-wrap: wrap-reverse;
  }
+
+
+ /* Contact Us Section */
+
+ .contact-us{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgba(134, 165, 177, 0.719);
+  height: 40vh;
+ }
+
+ .contact-content{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+ 
+ 
+ }
+
+ .contact-head{
+  font-size: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+  
+ }
+
+
+ hr{
+    background-color: rgb(75, 0, 0);
+    height:12px;
+    border: none;
+   
+  }
+
+  .contact-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .contact-btn1, .contact-btn2{
+    border: none;
+    padding: 5px;
+    border-radius: 4px;
+  }
+
+
+  /* Contact Us Media */
+  
+@media  screen and (max-width: 768px) { 
+  .contact-us{
+   display: flex;
+   flex-wrap: wrap;
+   gap: 35px;
+   padding: 10px;
+   height: 50vh;
+   background-color: rgba(119, 18, 0, 0.829);
+   border-bottom-left-radius: 150%;
+  }
+
+  
+ .contact-text{
+  font-style: oblique;
+  line-height: 10px;
+  padding-top: 45px;
+  color: white;
+ }
+  .contact-btn{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    
+  }
+}  
