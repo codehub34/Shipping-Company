@@ -247,18 +247,27 @@
           can serve you.
         </p>
       </div>
-      <form action="">
+      <form action="http://localhost:3000/submit" method="post"> 
         <label for="name">Name: </label>
-        <input type="text" id="name" placeholder="username"><br>
-        <label for="email">Email: </label>
-        <input type="email" name="email" id="email" placeholder="Email" required><br>
-        <label for="phone">Phone: </label>
-        <input type="text" name="phone" id="phone" placeholder="+231-777-888-999" required> <br>
-        <label for="messega">Message</label>
-        <textarea name="messega" id="messega"></textarea>
-        <input type="submit" name="submit" id="submit" value="Send Request">
-
-      </form>
+         <input type="text" id="name" name="name" placeholder="username" required><br>
+          <label for="email">Email: </label> 
+          <input type="email" name="email" id="email" placeholder="Email" required><br>
+            <label for="country-code">Country Code: </label> 
+              <select name="country-code" id="country-code">
+                <option value="+231">+231 (Liberia)</option> 
+                <option value="+1">+1 (USA)</option>
+                <option value="+44">+44 (UK)</option>
+                <option value="+91">+91 (India)</option>
+                <option value="+61">+61 (Australia)</option> 
+                <option value="+81">+81 (Japan)</option> 
+                <option value="+33">+33 (France)</option> 
+              </select>
+               <label for="phone-number">Phone Number:</label> 
+               <input type="tel" name="phone-number" id="phone-number" placeholder="777-888-999" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}"><br>
+               <label for="message">Message:</label>
+               <textarea name="message" id="message" placeholder="Type your message here..." required></textarea><br> 
+               <input type="submit" name="submit" id="submit" value="Send Request"> 
+       </form>
      </div>
      </div>
     </section>
