@@ -1,5 +1,19 @@
 
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelector('form').onsubmit = () => {
+    const username = document.querySelector('#name').value;
+    const contactUs = document.querySelector('#phone-number').value;
+    const country = document.querySelector('#country-code').value;
+    document.querySelector('#result').innerHTML = `Thanks for contacting City Lion, ${username}, and we'll call you by this, <a href="tel:">${country}-${contactUs}</a>`;
+     document.querySelector('form').reset();
+    return false; // Prevents form submission to demonstrate the message update
 
+  
+   
+  }
+ 
+
+});
 
 const burger = document.querySelector('.burger');
 const nav = document.querySelector('.nav-links');
@@ -17,50 +31,4 @@ const carousel = new bootstrap.Carousel(myCarouselElement, {
 })
 
 
-// BACKEND CODES
-
-const express = require('express');
-const mongoose = require('mongoose');
-const bodyParser = require('body-parser');
-
-const app = express();
-
-// Middleware
-app.use(bodyParser.json());
-
-// MongoDB connection
-mongoose.connect('mongodb://localhost:27017/contactDB', { useNewUrlParser: true, useUnifiedTopology: true });
-
-// Schema
-const contactSchema = new mongoose.Schema({
-  name: String,
-  email: String,
-  countryCode: String,
-  phoneNumber: String,
-  message: String
-});
-
-const Contact = mongoose.model('Contact', contactSchema);
-
-// Routes
-app.post('/submit', async (req, res) => {
-  const contact = new Contact({
-    name: req.body.name,
-    email: req.body.email,
-    countryCode: req.body['country-code'],
-    phoneNumber: req.body['phone-number'],
-    message: req.body.message
-  });
-  try {
-    await contact.save();
-    res.status(201).send('Contact information saved successfully!');
-  } catch (error) {
-    res.status(400).send('Error saving contact information');
-  }
-});
-
-// Server listening
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
-});
+// Forms 

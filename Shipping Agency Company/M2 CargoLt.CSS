@@ -674,7 +674,7 @@ header{
   justify-content: space-around;
   align-items: center;
   background-color: rgba(134, 165, 177, 0.719);
-  height: 40vh;
+  height: 80vh;
   padding: 20px 15px;
  }
 
@@ -767,3 +767,42 @@ header{
     width: 100%;
   }
 }  
+
+
+/* Form Styles */
+.form-container { 
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+}
+
+select, textarea{
+	background-color: transparent;
+}
+
+textarea{
+padding: 10px;
+}
+
+input{
+  all: initial;
+  border: 2px solid black;
+  border-radius: 4px;
+  padding: 10px;
+  margin: 8px;
+}
+input[type="submit"] {
+   background-color: #4e0404;
+  color: white; 
+  border: none; 
+  padding: 10px 20px; 
+  cursor: pointer; 
+  margin-top: 20px; }
+
+input:focus {
+  transition: all 3s ease-out;
+  border-bottom: 2px solid blue;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
