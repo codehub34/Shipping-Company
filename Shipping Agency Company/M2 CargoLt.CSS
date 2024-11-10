@@ -45,24 +45,26 @@ header{
     height: 50px;
     border-radius: 5px;
     mix-blend-mode: multiply;
-    animation: ride 2s infinite;
+   animation-name: move;
+   position: relative;
+   animation-duration: 2s;
+   animation-iteration-count: infinite;
+   animation-fill-mode: forwards;
     border-bottom: 2px solid var(--secondary-color);
   }
 
-  @keyframes ride {
+  @keyframes move {
     0%{
-      transform: translatex(-10px);
-      transition: 3s ease-out;
+      left: 0%;
     }
     50%{
-      transform: translatex(20px);
-      transition: all 4s ease-out;
+     left: 70%;
+     transform: rotateY(45deg);
+     border: 2px solid white;
     }
 
     100%{
-      transform: rotate(-50deg);
-      transition: all ease-out;
-      transition-delay: 6s;
+     left: 0%;
     }
 
   }
