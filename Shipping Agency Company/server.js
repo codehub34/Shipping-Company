@@ -30,4 +30,7 @@ const carousel = new bootstrap.Carousel(myCarouselElement, {
 })
 
 
+const imgBox = document.querySelector('#largeImage').style.display = "none";
+
+
 // Forms 
