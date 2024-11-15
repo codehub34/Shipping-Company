@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const username = document.querySelector('#name').value;
     const contactUs = document.querySelector('#phone-number').value;
     const country = document.querySelector('#country-code').value;
-    document.querySelector('#result').innerHTML = `Thanks for contacting City Lion, ${username}, and we'll call you by this, <a href="tel:">${country}-${contactUs}</a>`;
+    document.querySelector('#result').innerHTML = `Thanks for contacting City Lion, ${username}, <br>and we'll call you by this, <a href="tel:">${country}-${contactUs}</a>`;
      document.querySelector('form').reset();
     return false; // Prevents form submission to demonstrate the message update
  

@@ -666,7 +666,7 @@ header{
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 5% 50px;
+  padding: 5% 70px;
   flex-wrap: wrap-reverse;
  }
 
@@ -675,11 +675,12 @@ header{
 
  .contact-us{
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   background-color: rgba(134, 165, 177, 0.719);
-  height: 80vh;
-  padding: 20px 15px;
+ padding: 15px;
+ margin-left: auto;
+ margin-right: auto;
  }
 
  .contact-content{
@@ -687,14 +688,8 @@ header{
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  width: 60%;
+  /* width: 60%; */
  
- }
-
- .contact-head{
-  font-size: 20px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
-  
  }
 
 
@@ -703,37 +698,18 @@ header{
     height:6px;
   }
 
-  .contact-btn{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    gap: 10px;
-    background-color: #f7b80a;
-    padding: 10px;
-  }
-
-  .contact-btn1, .contact-btn2{
-    border: none;
-    padding: 5px;
-    border-radius: 4px;
-    background-color: #f7b80a;
-  }
-
-  .contact-btn1{
-    border-right: 2px solid white;
-    border-bottom: 2px solid white;
-  }
-
-  .contact-btn2{
-    border-left: 2px solid white;
-    border-bottom: 2px solid white;
-  }
-
   .contact-form{
  padding: 10px;
  font-size: 18px;
- line-height: 20px;
+ line-height: 15px;
+ max-width: 100%;
+  }
+
+  .contact-form-text p{
+    width: 80%;
+    max-width: 100%;
+    text-align: center;
+    margin-top: 30px;
   }
 
 
@@ -745,26 +721,27 @@ header{
    flex-wrap: wrap;
    gap: 25px;
    height: 50vh;
-   background-color: rgba(119, 18, 0, 0.829);
+   background-color: rgba(236, 132, 113, 0.356);
    border-bottom-left-radius: 100%;
   }
 
-  
- .contact-text{
-  font-style: oblique;
-  line-height: 10px;
-  padding-top: 45px;
-  color: white;
- }
-  .contact-btn{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    align-items: center;
+ 
+input[type="text"], input[type="email"],
+input[type="tel"]{
+  all: initial;
+  border: 2px solid orange;
+  border-radius: 4px;
+  padding: 5px;
+  width: 100%;
+  gap: 30px;
+  height: 50px;
+  margin-top: 20px;
+  font-size: 20px;
+}
+  .contact-form-text p{
+    width: 100%;
+    max-width: 100%;
     text-align: center;
-    gap: 10px;
-    background-color: transparent;
-    
   }
 
   .contact-content{
@@ -774,10 +751,14 @@ header{
 
 
 /* Form Styles */
+
+
 .form-container { 
   display: flex; 
   flex-direction: column; 
   align-items: center; 
+  width: 100%;
+
 }
 
 select, textarea{
@@ -785,23 +766,38 @@ select, textarea{
 }
 
 textarea{
-padding: 10px;
+padding: 5px;
+height: 150px;
+width: 100%;
+}
+
+#result{
+  padding-top: 25px;
 }
 
 input{
   all: initial;
-  border: 2px solid black;
+  border-bottom: 2px solid orange;
   border-radius: 4px;
-  padding: 10px;
-  margin: 8px;
+  padding: 5px;
+  margin-top: 20px;
+  width: 80%;
+  font-size: 20px;
 }
 input[type="submit"] {
    background-color: #4e0404;
   color: white; 
   border: none; 
+  text-align: center;
+  width: 200px;
+  display: flex;
+  padding-bottom: 45px;
+  margin-left: auto;
+  margin-right: auto;
   padding: 10px 20px; 
   cursor: pointer; 
-  margin-top: 20px; }
+  /* margin-top: 20px;  */
+}
 
 input:focus {
   transition: all 3s ease-out;
@@ -809,4 +805,65 @@ input:focus {
   border-top: none;
   border-left: none;
   border-right: none;
+}
+
+select{
+  border: none;
+}
+
+
+
+/* Cart */
+
+
+.container {
+  /* max-width: 1200px; */
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#largeImage {
+  max-width: 100%;
+  cursor: pointer;
+  mix-blend-mode: multiply;
+  border-radius: 50%;
+  /* padding-top: 45px; */
+}
+
+.thumbnails img {
+  width: 100px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.thumbnails img:last-child{
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cart {
+  margin-top: 20px;
+}
+
+.cart ul {
+  list-style: none;
+  padding: 0;
+}
+
+.cart button {
+  background: none;
+  border: 1px solid #333;
+  padding: 10px;
+  cursor: pointer;
 }
