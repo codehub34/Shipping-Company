@@ -12,12 +12,12 @@
 <body>
     <header>
             <nav class="navbar">
-                <div class="logo"><a href="#"><img src="CompanyImage/City Lion-Cargo.png" alt=""></a></div>
+                <div class="logo"><a href="#"><img src="CompanyImage/City_Lion-Cargo-removebg-preview.png" alt=""></a></div>
                 <ul class="nav-links">
                     <li><a href="#home">Home</a></li>
-                    <li><a href="#About">About</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#service">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
                     <div class="callus1">
                         <button><a href="tel:775776899">Call Us</a></button>
                         <button><a href="wa.me:+23177677688">News</a></button>
@@ -38,15 +38,18 @@
     <!-- Headline -->
 
     <section>
-      <div class="container-head">
+      <div class="container-head" id="home">
         <div class="head-content">
-          <div class="head-text">
-            <h1>City Lion-Cargo <br> Solutions.</h1>
-            <p>Welcome to our shipping agency, where we simplify the <br>
+          <div class="head-text" id="zoomInBottom1">
+            <h1 class="zoomInBottom1"><img class="head-imglogo" src="CompanyImage/City_Lion-Cargo-removebg-preview.png" alt="">Cargo <br>Solutions.</h1>
+            <p>Welcome to our shipping agency, where we simplify the
               logistics of your business</p>
               <div class="head-btn">
-                <button class="booked">Book Now</button>
+                <button class="booked"><a href="#contact">Book Now</a></button>
               </div>
+          </div>
+          <div class="head-img">
+            <img src="CompanyImage/red_truck-removebg-preview.png" alt="">
           </div>
         </div>
         <div class="head-card">
@@ -98,17 +101,40 @@
     <!-- ABOUT PAGE -->
 
     <section>
-      <div class="container-about">
+      <div class="container-about" id="about">
         <div class="about-content">
-          <span>About Our Services</span>
+          <span>---- About</span>
           <div class="about-text">
             <h1>City Lion-Cargo <br> Solutions.</h1>
             <p>At our shipping agency, we pride ourselves on <br> providing exceptional service and delivering your goods efficiently</p>
               <div class="about-btn">
-                <button class="booked">Book Now</button>
+                <button class="Explore-More"><a href="#service">Explore More</a></button>
               </div>
           </div>
         </div>
+<div class="about-right-container">
+  <div class="about-right-img">
+    <img src="CompanyImage/china-and-liberia-flags-for-official-meeting-against-background.jpg" alt="">
+  </div>
+  <div class="about-right-content">
+    <div class="about-info-content">
+      <h3>20+</h3>
+      <p>Certification</p>
+    </div>
+
+    <div class="about-info-content">
+      <h3>500+</h3>
+      <p>Complete Jobs</p>
+    </div>
+
+    <div class="about-info-content">
+      <h3>24/7</h3>
+      <p>Emergnecy Availability</p>
+    </div>
+
+  </div>
+</div>
+      </div>
     </section>
 
     <section>
@@ -149,10 +175,11 @@
 
     <!-- SERVICES -->
 
-    <section class="backgroud">
+    <section class="backgroud" id="service">
       <div class="service-text">
         <div class="service-content">
-          <h2>Trusted Partnerships</h2>
+          <h1>Trusted</h1>
+          <h2 class="typing"> Partnerships</h2>
           <p>At our shipping agency, we take great pride in our long-standing  partnerships with industry leaders. These collaborations allow us to offer  our customers unparalleled service, competitive pricing</p>
            </div>
       </div>
@@ -225,11 +252,9 @@
         </div>
         </div>
     </section> 
-    <section>
+    <section id="contact">
      <div class="contact-us">
-      <h2 style="text-align: center;">Contact Us</h2>
      <div class="contact-content">
-      
       <div class="container">
         <div class="gallery">
             <img id="largeImage" src="CompanyImage/CEO.png" alt="Product Image" onclick="openLightbox();">
@@ -240,44 +265,30 @@
                 <img src="CompanyImage/Kcali-1024x924.png" alt="Thumbnail 3" onclick="changeImage('images/product3.jpg');">
             </div>
         </div>
-      
     </div>
 
 
      </div>
-     <div class="contact-form">
-      <div class="contact-form-text">
-        <em>Please fill out the form below and one of City Lion Cargo Staffs will contact you to find out how we 
-          can serve you.
-        </em>
-      </div>
       <div class="form-container"> 
+        <div class="contact-form">
+          <div class="contact-form-text">
+            <h3>Please fill out the form
+            </h3>
+          </div>
         <form action="" method=""> 
           <!-- <label for="name">Name: </label>  -->
-          <input type="text" id="name" name="name" placeholder="username" required> 
+          <input type="text" id="name" name="name" placeholder="Username" required> 
           <!-- <label for="email">Email: </label>  -->
-          <input type="email" name="email" id="email" placeholder="Email" required><br> 
-          <!-- <label for="country-code">Country Code: </label>  <br> --> <br>
-          <select name="country-code" id="country-code"> 
-            <option value="+231">Country-code</option> 
-            <option value="+231">+231 (Liberia)</option> 
-            <option value="+1">+1 (USA)</option> 
-            <option value="+44">+44 (UK)</option> 
-            <option value="+91">+91 (India)</option> 
-            <option value="+61">+61 (Australia)</option> 
-            <option value="+81">+81 (Japan)</option> 
-            <option value="+33">+33 (France)</option> 
-          </select> <br>
-          <!-- <label for="phone-number">Phone Number: </label>  -->
-          <input type="tel" name="phone-number" id="phone-number" placeholder="777-888-999" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}"><br> 
-          <!-- <label for="message">Message: </label>  --> <br>
+          <input type="email" name="email" id="email" placeholder="Email" required> <br><br>
+          <!-- <label for="message">Message: </label> <br> <br> -->
           <textarea name="message" id="message" placeholder="Type your message here..." required></textarea><br> 
           <input type="submit" name="submit" id="submit" value="Send Request"> 
+
+          <div id="result">
+            <a id="cals" href="tel"></a>
+          </div>
+          
         </form> 
-        <div id="result">
-          <a id="cals" href="tel"></a>
-        </div>
-        
       </div>
      </div>
      </div>
