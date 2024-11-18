@@ -36,3 +36,43 @@ const imgBox = document.querySelector('#largeImage').style.display = "none";
 
 
 // Forms 
+
+const express = require('express');
+const bodyParser = require('body-parser');
+const nodemailer = require('nodemailer');
+
+const app = express();
+app.use(bodyParser.json());
+
+// Nodemailer setup
+const transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+        user: 'your-email@gmail.com', // Replace with your email
+        pass: 'your-email-password'  // Replace with your email password
+    }
+});
+
+// Endpoint to handle form submission and send email
+app.post('/send-email', (req, res) => {
+    const { username, email } = req.body;
+
+    const mailOptions = {
+        from: 'your-email@gmail.com', // Replace with your email
+        to: 'recipient-email@example.com', // Replace with recipient's email
+        subject: 'Form Submission',
+        text: `Username: ${username}\nEmail: ${email}`
+    };
+
+    transporter.sendMail(mailOptions, (error, info) => {
+        if (error) {
+            return res.status(500).json({ error: error.message });
+        }
+        res.status(200).json({ message: 'Email sent successfully!' });
+    });
+});
+
+app.listen(3000, () => {
+    console.log('Server running on port 3000');
+});
+

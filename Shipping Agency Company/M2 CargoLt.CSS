@@ -402,12 +402,29 @@ border-radius: 45px;
 
 .head-btn>.booked a{
   position: absolute;
-  border-left: 14px solid var(--primary-color);
+  border-left: 24px solid var(--primary-color);
   /* left: 50px; */
+  text-decoration: none;
   text-align: center;
-  width: 200px;
+  width: 12em;
+  height: 3em;
+  border-radius: 30em;
   margin-left: auto;
+  box-shadow: 4px 4px 10px var(--secondary-color),
+  -4px 4px 10px var(--primary-color);
   margin-right: auto;
+  background-color: #490303;  
+  padding: 10px 20px;
+  color: white;
+  transition: 0.5s ease-in;
+}
+
+.booked a:hover{
+  text-decoration: none;
+  opacity: 1;
+  border-left:50px solid rgb(49, 3, 3);
+  background-color: #f7b80a;
+  color: #4e0404;
 }
 
 @media screen and (max-width: 768px) {
@@ -584,31 +601,65 @@ border-radius: 45px;
 }
 
 .about-btn{
-  display:block;
-  justify-content: last baseline;
-}
-
-.booked a{
-  background-color: #490303;
+  display:flex;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  padding-top: 45px;
   border: none;
- display: flex;
-  border-right:14px solid rgb(255, 255, 255);
-  padding: 10px 20px;
-  color: white;
-  transition: 0.5s ease-in;
-  /* float: right; */
+
 }
 
-.booked a:hover{
+.Explore-More{
+  width: 11em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2.5em;
+  border: none;
+  border-radius: 30px;
+  font-size: 18px;
+  font-family: inherit;
+  position: relative;
+  cursor: pointer;
   text-decoration: none;
-  opacity: 0.8;
-  border-top-right-radius: 55%;
-  border-bottom-right-radius: 55%;
-  border-left:50px solid rgb(49, 3, 3);
-  /* border-radius: 4px; */
+  /* overflow: hidden; */
+  color: white;
   background-color: #f7b80a;
-  color: #4e0404;
+  z-index: 1;
+  transition: .5s ease-out;
+  box-shadow: 4px 4px 10px var(--secondary-color),
+  -4px 4px 10px var(--primary-color);
 }
+
+.Explore-More a{
+  text-decoration: none;
+  font-family: inherit;
+  font-weight: 600;
+  display: flex;
+  border: none;
+  justify-content: center;
+  align-items: center;
+}
+.Explore-More:hover{
+  background-color: #490303;
+}
+.Explore-img{
+  filter: drop-shadow(2px 0 2px white);
+  width: 35px;
+  margin-left: 10px;
+}
+
+.Explore-a{
+  transition: 0.4s linear;
+ }
+
+.Explore-a:hover{
+  margin-left: 25px;
+  color: white;
+  
+ }
+ 
 
 
 /* About Page RIght Side */
@@ -801,6 +852,10 @@ border-radius: 45px;
 
 }
 
+.service-img{
+  Border-image: fill 0 linear-gradient(#0003, #00000056);
+}
+
 .card-service{
   background-color: white;
   padding: 10px;
@@ -894,10 +949,7 @@ border-radius: 45px;
     height:6px;
   }
   .contact-form { 
-    background: linear-gradient( to bottom, rgba(146, 135, 110, 0.616)  10%, rgba(223, 106, 106, 0.479) 80% ), url('CompanyImage/warehouse-and-storage img.jpg');
-    background-position: center; 
-    background-size: cover;
-     /* backdrop-filter: blur(4px);  */
+    /* background: linear-gradient( to bottom, rgba(146, 135, 110, 0.616)  10%, rgba(223, 106, 106, 0.479) 80% ), url('CompanyImage/warehouse-and-storage img.jpg'); */
      padding: 10px; 
      font-size: 18px; 
      line-height: 15px; 
