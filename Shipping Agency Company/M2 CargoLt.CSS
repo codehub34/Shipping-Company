@@ -39,9 +39,9 @@ header{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    height: 64px;
+    height: 84px;
     background-color: var(--primary-color);
-    padding: 0 20px;
+    /* padding: 0 20px; */
   }
   
   .logo a>img{
@@ -49,7 +49,7 @@ header{
     height: 50px;
     border-radius: 5px;
     mix-blend-mode: multiply;
-   animation-name: move;
+   /* animation-name: move; */
    position: relative;
    animation-duration: 8s;
    animation-iteration-count: 2;
@@ -78,6 +78,7 @@ header{
   .nav-links {
     list-style: none;
     display: flex;
+    align-items: center;
     justify-content: space-evenly;
     transition: transform 0.3s ease-in-out;
   }
@@ -91,36 +92,71 @@ header{
     text-decoration: none;
     font-size: 18px;
     border-bottom-width: 2px solid orange ;
-  transition: all 0.2s ease-in-out;
+  /* transition: all 0.2s ease-in-out; */
+  }
+
+  .nav-links>a:focus{
+    background-color: #4e0404;
   }
 
   .nav-links a:hover{
    text-decoration: underline;
-   /* line-height: 2px; */
   border-bottom: 2px solid rgb(54, 2, 2);
   border-bottom-width: 6px solid orange ;
 
   }
 
   .callus1{
-   display: inline-flex;
-
+   margin-left: 65px; 
+   padding: 10px;
+   color: white;
   }
+
+   .Whatsapp-btn, .call-btn{
+    padding: 4px;
+    width: 9em;
+    background-color: #4e0404;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    transition: 0.2s ease-out;
+  }
+
+  .call-btn a{
+    color: white;
+  }
+
+  .Whatsapp-btn{
+    margin-left: 15px;
+  }
+
+  .Whatsapp-btn>a{
+    color: white;
+  }
+
   
+  .Whatsapp-btn:hover, .call-btn:hover{
+    background-color: #f7b80a;
+    border: 2px solid white;
+  }
+
   .callus{
     display: none;
   }
   .burger {
     display: none;
     cursor: pointer;
-    transition: 0.3s ease-out;
-    border: 1px solid rgb(0, 0, 0);
+    transition: 0.2s linear;
+    padding: 5px;
+    background-color: rgba(78, 2, 19, 0.322);
+    /* border: 1px solid rgb(0, 0, 0); */
     border-radius: 4px;
   }
 
   .burger:hover{
     background-color: #330202ad;
-    border-radius: 4px;
+    border-radius: 50%;
+    padding: 5px;
   }
   
   .burger div {
@@ -312,9 +348,26 @@ border-radius: 45px;
 
 }
 
+
+
 .head-img img{
   width: 100%;
-  filter: drop-shadow( 5px 5px 5px white);
+  animation-name: animate;
+  animation-duration: 12s;
+  animation-iteration-count: infinite;
+ 
+  /* background-color: rgba(255, 255, 255, 0.438); */
+  filter: drop-shadow( 5px 45px 5px rgb(255, 255, 255));
+  
+}
+
+@keyframes animate {
+  0%{
+    transform: skewY(0deg);
+  }
+  50%{
+    transform: skewY(20deg);
+  }
 }
 
 .head-imglogo{
@@ -509,7 +562,7 @@ border-radius: 45px;
 .card:hover{
   cursor: pointer;
   transform: scale(1.08);
-  opacity: 0.6;
+  /* opacity: 0.6; */
 }
 
 .card img{
@@ -970,196 +1023,43 @@ border-radius: 45px;
   /* Contact Us Media */
   
 @media  screen and (max-width: 768px) { 
-  .contact-us{
-   display: flex;
-   flex-wrap: wrap;
-   gap: 25px;
-   height: 50vh;
-   background-color: rgba(236, 132, 113, 0.356);
-   border-bottom-left-radius: 100%;
-  }
+  
 
- 
-input[type="text"], input[type="email"]{
-  border: 2px solid rgba(255, 166, 0, 0.562);
-  border-radius: 4px;
-  width: 100%;
-  height: 40px;
-  padding: 5px;
-  font-family: Arial, Helvetica, sans-serif;
-  margin-top: 20px;
-  font-size: 20px;
-}
-  .contact-form-text p{
-    width: 100%;
-    max-width: 100%;
-    text-align: center;
-  }
-
-  .contact-content{
-    width: 100%;
-  }
 }  
 
 
 /* Form Styles */
 
 
-.form-container { 
-  display: flex; 
-  flex-direction: column; 
-  align-items: center; 
-  margin-right: auto;
-  padding: 10px;
-  background-color: #33333348;
+.contact-container { 
+  height: 206px;
+  background-image: url(CompanyImage/Shipping-Companies_.jpg);
   filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.397));
-
+  border-bottom-right-radius: 45%;
+  border-bottom-left-radius: 45%;
 
 }
 
-select, textarea{
-	background-color: transparent;
+.contact-content{
+  display: flex; 
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
-textarea{
-padding: 15px;
-height: 150px;
-width: 100%;
-background-color: white;
-}
-
-#result{
-  padding-top: 25px;
-  text-align: center;
-}
-
-
-
- 
-input[type="text"], input[type="email"]{
-  border: 2px solid rgba(255, 166, 0, 0.562);
-  border-radius: 4px;
+.contact-img .contact-form{
+  flex-grow: 1;
+  flex-basis: 200px;
   width: 100%;
-  height: 40px;
-  padding: 5px;
-  font-family: Arial, Helvetica, sans-serif;
-  margin-top: 20px;
-  font-size: 20px;
+  margin-top: 2rem;
 }
 
-input[type="tel"]{
-  display: none;
-}
-
-input[type="submit"] {
-   background-color: #4e0404;
-  color: white; 
-  border: none; 
-  text-align: center;
-  width: 200px;
-  display: flex;
-  padding-bottom: 45px;
-  margin-top: 20px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 10px 20px; 
-  transition: 0.4s ease-out;
-  cursor: pointer; 
-  /* margin-top: 20px;  */
-}
-
-input[type="submit"]:hover{
-  background-color: #ffbd08;
-  transform: scale(1.04);
-  border: 3px solid white;
-}
-
-input:focus {
-  transition: all 3s ease-out;
-  border-bottom: 2px solid blue;
-  border-top: none;
-  border-left: none;
-  border-right: none;
-}
-
-select{
-  border: none;
-}
-
-
-
-/* Cart */
-
-
-.container {
-  /* max-width: 1200px; */
-  margin: 0 auto;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.gallery {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-#largeImage {
+.contact-img img{
   max-width: 100%;
-  cursor: pointer;
-  mix-blend-mode: multiply;
-  border-radius: 50%;
-  /* padding-top: 45px; */
-}
-
-.thumbnails img {
-  width: 100px;
-  margin: 10px;
-  cursor: pointer;
-  animation-name: scale;
-  animation-duration: 5s;
-  animation-iteration-count: infinite;
-}
-
-@keyframes scale {
-  0%{
-    transform: scale(1);
-    opacity: 1;
-  }
-
-  50%{
-    transform: scale(1.5);
-    filter: drop-shadow(0px 0px 10px rgba(158, 24, 24, 0.801));
-  }
-
-  100%{
-    transform: scale(1);
-    
-  }
-  
-}
-
-.thumbnails img:last-child{
-  display: flex;
-  justify-content: center;
+  width: 500px;
   margin-left: auto;
   margin-right: auto;
-}
-
-.cart {
-  margin-top: 20px;
-}
-
-.cart ul {
-  list-style: none;
-  padding: 0;
-}
-
-.cart button {
-  background: none;
-  border: 1px solid #333;
-  padding: 10px;
-  cursor: pointer;
+  
+  
 }

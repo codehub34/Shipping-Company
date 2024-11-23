@@ -19,12 +19,12 @@
                     <li><a href="#service">Services</a></li>
                     <li><a href="#contact">Contact</a></li>
                     <div class="callus1">
-                        <button><a href="tel:775776899">Call Us</a></button>
-                        <button><a href="wa.me:+23177677688">News</a></button>
+                        <button class="call-btn"><a href="tel:775776899">Call Us</a></button>
+                        <button class="Whatsapp-btn"><a href="wa.me:+23177677688">News</a></button>
                     </div>
                 </ul>
                 <div class="callus">
-                    <li><a href="tel:775776899">Call Us</a></li>
+                    <button class="call-btn"><a href="tel:775776899">Call Us</a></button>
                     <!-- <li><a href="wa.me:+23177677688">Schedule Appointment</a></li> -->
                 </div>
                 <div class="burger">
@@ -49,7 +49,7 @@
               </div>
           </div>
           <div class="head-img">
-            <img src="CompanyImage/red_truck-removebg-preview.png" alt="">
+            <img src="CompanyImage/cargo-removebg-preview.png" alt="">
           </div>
         </div>
         <div class="head-card">
@@ -253,45 +253,28 @@
         </div>
     </section> 
     <section id="contact">
-     <div class="contact-us">
-     <div class="contact-content">
-      <div class="container">
-        <div class="gallery">
-            <img id="largeImage" src="CompanyImage/CEO.png" alt="Product Image" onclick="openLightbox();">
-            <h1>CEO</h1>
-            <div class="thumbnails">
-                <img src="CompanyImage/Alfred-Sheriff--263x300.png" alt="Thumbnail 1" onclick="changeImage('nation-delivery.webp');">
-                <img src="CompanyImage/Leo-Sheriff--893x1024.png" alt="Thumbnail 2" onclick="changeImage('images/product2.jpg');">
-                <img src="CompanyImage/Kcali-1024x924.png" alt="Thumbnail 3" onclick="changeImage('images/product3.jpg');">
-            </div>
+   <div class="contact-container"  id="contact">
+    <div class="contact-content">
+      <div class="contact-img">
+        <img src="CompanyImage/contact us.png" alt="">
+      </div>
+
+      <div class="contact-form"> 
+        <h1>Let's Connect</h1> 
+        <form id="contactForm"> 
+          <label for="firstName">First Name:</label> <br>
+          <input type="text" id="firstName" name="firstName" required><br> 
+          <label for="lastName">Last Name:</label> <br>
+          <input type="text" id="lastName" name="lastName" required><br> 
+          <label for="email">Email:</label><br> 
+          <input type="email" id="email" name="email" required> <br>
+          <label for="message">Message:</label> <br>
+          <textarea id="message" name="message" rows="4" required></textarea> <br>
+          <button type="submit">Submit</button> 
+        </form> 
         </div>
     </div>
-
-
-     </div>
-      <div class="form-container"> 
-        <div class="contact-form">
-          <div class="contact-form-text">
-            <h3>Please fill out the form
-            </h3>
-          </div>
-        <form action="" method=""> 
-          <!-- <label for="name">Name: </label>  -->
-          <input type="text" id="name" name="name" placeholder="Username" required> 
-          <!-- <label for="email">Email: </label>  -->
-          <input type="email" name="email" id="email" placeholder="Email" required> <br><br>
-          <!-- <label for="message">Message: </label> <br> <br> -->
-          <textarea name="message" id="message" placeholder="Type your message here..." required></textarea><br> 
-          <input type="submit" name="submit" id="submit" value="Send Request"> 
-
-          <div id="result">
-            <a id="cals" href="tel"></a>
-          </div>
-          
-        </form> 
-      </div>
-     </div>
-     </div>
+   </div>
     </section>
 
    
